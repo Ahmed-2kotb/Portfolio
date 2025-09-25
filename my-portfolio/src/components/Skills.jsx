@@ -22,9 +22,9 @@ const Skills = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setVisible(true);   // يظهر الكارد لما القسم يدخل الشاشة
+            setVisible(true);   
           } else {
-            setVisible(false);  // يرجع يختفي لما نطلع من القسم
+            setVisible(false);  
           }
         });
       },
@@ -46,7 +46,7 @@ const Skills = () => {
           <div
             key={index}
             className={`skill-card ${visible ? "show" : ""}`}
-            style={{ transitionDelay: `0s` }} // كل الكارد بنفس التوقيت
+            style={{ transitionDelay: `0s` }} 
           >
             <span className="skill-icon">{skill.icon}</span>
             <h3 className="skill-name">{skill.name}</h3>
