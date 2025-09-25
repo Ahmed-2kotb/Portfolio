@@ -1,12 +1,11 @@
-/* About.css */
 .about {
   padding: 4rem 2rem;
-  background: #0f172a; /* خلفية سودا */
+  background: #0f172a; 
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* يركّز كل المحتوى في منتصف الشاشة */
+  justify-content: center; 
   min-height: 100vh;
 }
 
@@ -48,7 +47,6 @@
   transform: translateY(0);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .about h2 {
     font-size: 2rem;
