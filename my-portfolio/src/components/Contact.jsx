@@ -10,9 +10,9 @@ const Contact = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setVisible(true);   // يظهر الأنيميشن
+            setVisible(true);   
           } else {
-            setVisible(false);  // يختفي لما نطلع
+            setVisible(false);  
           }
         });
       },
