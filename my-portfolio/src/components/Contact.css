@@ -1,0 +1,154 @@
+/* ================= Contact Section ================= */
+.contact {
+  padding: 4rem 2rem;
+  background: #0f172a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ===== Title ===== */
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  opacity: 0;
+  transform: translateY(-50px); /* ينزل من فوق */
+  transition: all 0.8s ease;
+}
+
+.contact h2.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact h2::after {
+  content: '';
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff0080, #7928ca);
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* ===== Form ===== */
+.contact-form {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateY(60px); /* يطلع من تحت */
+  transition: all 0.9s ease;
+  transition-delay: 0.2s; /* يبدأ بعد العنوان بشوية */
+}
+
+.contact-form.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Labels ===== */
+.contact-form label {
+  display: block;
+  text-align: left;
+  color: #ddd;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Inputs & Textarea ===== */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  color: #fff;
+  background: #1e293b;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: #334155;
+  box-shadow: 0 0 10px rgba(255, 0, 128, 0.6);
+}
+
+/* ===== Button ===== */
+.contact-form button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #ff0080, #7928ca);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 0, 128, 0.7);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+}
+
+/* ===== Animations ===== */
+@keyframes fadeDown {
+	from {
+		opacity: 0;
+		transform: translateY(-30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+	.contact h2 {
+		font-size: 2rem;
+	}
+
+	.contact-form {
+		padding: 1.5rem;
+	}
+}

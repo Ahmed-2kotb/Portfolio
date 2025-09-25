@@ -1,0 +1,76 @@
+/* Skills.css */
+.skills {
+  padding: 4rem 2rem;
+  background: #ffffff; /* خلفية سودا */
+  text-align: center;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #060707;
+}
+.skills h2::after {
+  content: '';
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff0080, #7928ca);
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+/* شبكة الكاردات */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  justify-items: center; /* يوسّط كل كارد في الخانة */
+  align-items: start;   /* يحافظ على ترتيبهم من فوق لتحت */
+}
+
+/* الكارد */
+.skill-card {
+  background: #374d4c;
+  padding: 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: transform 0.6s ease, box-shadow 0.3s ease, opacity 0.6s ease;
+  width: 120px;
+  /* نحذف الـ box-shadow الأساسي */
+}
+
+.skill-card.show {
+  opacity: 1;
+  transform: translateY(10px);
+}
+
+/* يظهر الظل بس عند hover */
+.skill-card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 20px 40px rgba(232, 32, 32, 0.6);
+}
+
+
+.skill-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills h2 {
+    font-size: 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}

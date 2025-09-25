@@ -1,0 +1,150 @@
+.hero {
+  display: flex;
+  align-items: center;       
+  justify-content: center;   
+  min-height: 100vh;
+  padding: 0 5%;
+  gap: 3rem;               
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #cbd5e1;
+  margin-bottom: 1.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.hero-buttons a {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #2563eb;
+}
+
+.btn-secondary {
+  background-color: #e11d48;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #b91c1c;
+}
+
+/* صورة الهيرو */
+.hero-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img {
+  width: 280px;
+  border-radius: 20px;
+  opacity: 0.9;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.hero-img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.fade-in.delay-1 { animation-delay: 0.5s; }
+.fade-in.delay-2 { animation-delay: 1s; }
+.fade-in.delay-3 { animation-delay: 1.5s; }
+
+
+@media (max-width: 992px) {
+  .hero {
+    gap: 1.5rem;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+    margin-top: 80px;
+  }
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+  .hero-img {
+    width: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding-top: 4rem; 
+    padding-bottom: 2rem; 
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hero-image-container {
+    justify-content: center;
+  }
+
+  .hero-img {
+    width: 300px;
+    max-width: 80%;
+  }
+}
